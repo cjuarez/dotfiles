@@ -37,3 +37,4 @@ Note that if there was not an original version, the installed links will not be 
 ## Credits
 
 Install file based on Based on Sontek's project https://github.com/sontek/dotfiles
+.bash_prompt and .bash_profile from https://github.com/mathiasbynens/dotfiles
