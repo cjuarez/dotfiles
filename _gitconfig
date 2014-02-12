@@ -1,0 +1,21 @@
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[user]
+	name = Celso Juarez
+	email = celsojuarez@gmail.com
+[alias]
+	# git ds - diff your staged changes == review before committing.
+	ds = diff --staged
+	# smarter status - include tag and branch info
+	st = status -sb
+	# I know what you did yesterday - great for follow-ups
+	fup = log --since '1 day ago' --oneline --author celsojuarez@gmail.com
+	# pretty one-line log with tags, branches and authors
+	ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+	# a verbose ls, shows changed files too
+	lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --numstat
+	# Log with graph
+	lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	# Log with graph fulldate
+	lgfull = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
